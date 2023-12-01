@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace IntegradorSofttekImanol.DAL.Context
 {
     /// <summary>
-    /// Represents the application's database context that manages database tables.
+    /// Represents the application's database context that manages database tables.//
     /// </summary>
     public class AppDbContext : DbContext
     {
