@@ -50,18 +50,10 @@ namespace BilleteraVirtualSofttekBack.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("clients")]
-        public async Task<IActionResult> GetAllClients([FromQuery] int page = 1, [FromQuery] int units = 10)
+        public async Task<IActionResult> GetAllClients()
         {
-            if (page < 1 || units < 1)
-            {
-                _logger.LogInformation($"There was an error in the pagination, page = {page}, units = {units}!");
-                return ResponseFactory.CreateErrorResponse(HttpStatusCode.BadRequest, "There was an error in the pagination!");
-            }
 
-            var clients = await _service.GetAllClientsAsync(page, units);
-
-            _logger.LogInformation("All clients were retrieved!");
-            return ResponseFactory.CreateSuccessResponse(HttpStatusCode.OK, clients);
+            return Ok("Hola!");
 
         }
 
