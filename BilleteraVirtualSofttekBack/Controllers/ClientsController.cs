@@ -45,14 +45,13 @@ namespace BilleteraVirtualSofttekBack.Controllers
         /// 400 Bad Request response if the pagination parameters are invalid.
         /// </returns>
         [HttpGet]
-        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("clients")]
         public async Task<IActionResult> GetAllClients()
         {
-
+            
             return Ok("Hola!");
 
         }
